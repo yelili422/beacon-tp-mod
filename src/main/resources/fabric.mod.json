@@ -1,0 +1,38 @@
+{
+	"schemaVersion": 1,
+	"id": "beacon-tp",
+	"version": "${version}",
+	"name": "Beacon TP",
+	"description": "Allow players to teleport to beacons by command /btp",
+	"authors": [
+		"YeLi(i@yeli.io)"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/beacon-tp/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			{
+				"value": "io.yeli.btp.BeaconTPMod",
+				"adapter": "kotlin"
+			}
+		]
+	},
+	"mixins": [
+		"beacon-tp.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.16.5",
+		"minecraft": "~1.18.2",
+		"java": ">=17",
+		"fabric-api": "*",
+		"fabric-language-kotlin": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
